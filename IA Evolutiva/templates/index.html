@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS // AI Core Interface</title>
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="futuristic-bg"></div>
+
+    <div class="chat-wrapper">
+        <header class="chat-header">
+            <div class="status-indicator">
+                <span class="pulse-dot"></span>
+                <span class="system-title">NEXUS // AI CORE</span>
+            </div>
+            <div class="header-actions">
+                <!-- Botão de Upload de Ficheiro -->
+                <label class="btn-upload" title="Enviar PDF ou TXT">
+                    📂 + Ficheiro
+                    <input type="file" id="fileInput" accept=".txt,.pdf" style="display: none;" onchange="enviarArquivo()">
+                </label>
+                <button class="btn-reset" onclick="resetarConversa()" title="Limpar Histórico">⚡ Reset</button>
+            </div>
+        </header>
+
+        <div id="chat-box" class="chat-box">
+            <div class="message ai-message">
+                <div class="avatar">AI</div>
+                <div class="bubble">
+                    <span>Olá! Sistema online e pronto. Carregue documentos ou faça perguntas para iniciar.</span>
+                    <button class="btn-voz" onclick="lerVoz(this, 'Olá! Sistema online e pronto.')">🔊 Ouvir</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-input-area">
+            <div class="input-glow-wrapper">
+                <input type="text" id="perguntaInput" placeholder="Escreva o seu comando ou pergunta..." onkeypress="verificarEnter(event)">
+                <button onclick="enviarMensagem()">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>''
+</body>
+</html>

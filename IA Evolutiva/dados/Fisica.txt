@@ -1,0 +1,99 @@
+================================================================================
+                    FÓRMULAS DE MECÂNICA CLÁSSICA
+================================================================================
+
+--------------------------------------------------------------------------------
+1. VETORES E ÁLGEBRA VETORIAL
+--------------------------------------------------------------------------------
+- Decomposição cartesiana:
+  A_vetor = A_x * i + A_y * j + A_z * k
+
+- Módulo de um vetor:
+  |A| = sqrt(A_x^2 + A_y^2 + A_z^2)
+
+- Componentes trigonométricas:
+  A_x = A * cos(theta)
+  A_y = A * sin(theta)
+
+
+--------------------------------------------------------------------------------
+2. CINEMÁTICA DE UMA PARTÍCULA
+--------------------------------------------------------------------------------
+- Vetor Posição:
+  r(t) = x(t)*i + y(t)*j + z(t)*k
+
+- Deslocamento:
+  D(t, t') = Delta_r = r(t') - r(t)
+
+- Velocidade Média:
+  V_M = Delta_r / Delta_t
+
+- Velocidade Instantânea:
+  V(t) = dr(t) / dt
+
+- Aceleração Média:
+  a_M = Delta_V / Delta_t
+
+- Aceleração Instantânea:
+  a(t) = dV(t) / dt = d^2r(t) / dt^2
+
+- Aceleração Tangencial (Paralela):
+  a_tan = dV(t) / dt
+
+- Aceleração Centrípeta (Ortogonal):
+  a_cent = V * omega = V^2 / R = omega^2 * R
+
+
+--------------------------------------------------------------------------------
+3. MOVIMENTOS ESPECÍFICOS
+--------------------------------------------------------------------------------
+A) Movimento Uniformemente Variado (Aceleração Constante)
+   - Posição:    r(t) = r_0 + V_0*(t - t_0) + (1/2)*a*(t - t_0)^2
+   - Velocidade: V(t) = V_0 + a*(t - t_0)
+
+B) Queda Livre
+   - Aceleração: a = g  (onde g ≈ 9.8 m/s^2)
+   - Posição:    r(t) = r_0 + V_0*t + (1/2)*g*t^2
+   - Tempo de queda (a partir do repouso):   t = sqrt(2*H / g)
+   - Velocidade ao atingir o solo (repouso): V = sqrt(2*g*H)
+
+C) Movimento Circular Uniforme (MCU)
+   - Velocidade Angular: omega = d(theta) / dt = V / R
+   - Aceleração Centrípeta: a_cent = V^2 / R = omega^2 * R
+
+
+--------------------------------------------------------------------------------
+4. VELOCIDADE RELATIVA
+--------------------------------------------------------------------------------
+- Relação de velocidades entre referenciais:
+  V_(A/C) = V_(A/B) + V_(B/C)
+  (Velocidade de A em relação a C é a soma das velocidades de A/B e B/C)
+
+
+--------------------------------------------------------------------------------
+5. LEIS DE NEWTON E DINÂMICA
+--------------------------------------------------------------------------------
+- Primeira Lei de Newton (Inércia):
+  Se Resultante (R) = sum(F_i) = 0  =>  a = 0 (Velocidade constante)
+
+- Segunda Lei de Newton:
+  - Forma Vetorial:    R = sum(F_i) = m * a
+  - Por Componentes:   R_x = m * a_x
+                       R_y = m * a_y
+                       R_z = m * a_z
+  - Força Peso:        P = m * g
+
+- Terceira Lei de Newton (Ação e Reação):
+  F_(A/B) = - F_(B/A)
+
+
+--------------------------------------------------------------------------------
+6. FORÇAS DE CONTATO E ATRITO
+--------------------------------------------------------------------------------
+- Atrito Estático Máximo:
+  F_at_max = mu_e * N
+  (No plano inclinado em equilíbrio: F_at = M*g*sin(theta) e N = M*g*cos(theta))
+
+- Atrito Cinético:
+  F_at_cinetico = mu_c * N
+================================================================================

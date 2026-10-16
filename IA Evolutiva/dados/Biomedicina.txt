@@ -1,0 +1,60 @@
+SEÇÃO: CAPÍTULOS E CONTEÚDOS PRÁTICOS
+[CAPÍTULO I: BIOLOGIA CELULAR]
+Autores: Geórgia M. Dexheimer, Gabriela K. S. Lawisch, Michelle Mergener
+Conteúdo: Apresenta os conceitos básicos da célula e a história da microscopia óptica.
+Práticas: Manuseio do microscópio óptico; observação de células do epitélio bucal, vegetais e bactérias do iogurte; comparação do tamanho entre procariontes e eucariontes; visualização vital de mitocôndrias com Verde Janus; propriedades físico-químicas e transporte através da membrana plasmática (osmose e crenação de hemácias); e observação de mitose em raiz de cebola (Allium cepa).
+
+[CAPÍTULO II: CITOGENÉTICA]
+Autores: Michelle Mergener
+Conteúdo: Focado na avaliação de mutações, genotoxicidade e instabilidade genômica.
+Práticas: Ensaio Cometa (SCGE): Medição de quebras de fita simples/dupla do DNA em células individuais induzidas por agentes genotóxicos. Teste de Micronúcleos em Linfócitos: Avaliação de danos cromossômicos (clastogênese e aneugênese) por meio da contagem de micronúcleos em células binucleadas bloqueadas por citocalasina B.
+
+[CAPÍTULO III: BIOLOGIA MOLECULAR]
+Autores: Adriane Pozzobon
+Conteúdo: Abrange o isolamento e estudo de ácidos nucleicos para diagnósticos genéticos, infecciosos e forenses.
+Práticas: Extração de DNA de sangue periférico com tampões TKM; extração de RNA tecidual com reagente Trizol®; quantificação e avaliação de pureza de ácidos nucleicos por espectrofotometria (razão 260/280 nm); Reação em Cadeia da Polimerase (PCR) para amplificação do gene VEGF; e eletroforese em gel de agarose corado com brometo de etídio.
+
+[CAPÍTULO IV: BIOQUÍMICA]
+Autores: Geórgia M. Dexheimer, Jairo L. Hoerlle, Vanderlei Biolchi
+Conteúdo: Estudo das biomoléculas (enzimas, proteínas, carboidratos e lipídios) e cinética enzimática.
+Práticas: Efeito da temperatura e concentração de substrato na atividade enzimática; hidrólise do amido e caracterização da urease e polifenol oxidase; reações colorimétricas e de precipitação de proteínas/aminoácidos (Ninidrina, Biureto, Xantoproteica, Millon, Método de Heller, TCA); identificação de carboidratos (Seliwanoff, Benedict, Lugol, dosagem de glicose); extração de lecitina e saponificação; curva de titulação da glicina; e determinação cinética UV das enzimas de função hepática/cardíaca (ALT/TGP, AST/TGO e CK).
+
+[CAPÍTULO V: HEMATOLOGIA]
+Autores: Adriane Pozzobon, Geórgia M. Dexheimer, Welton Lüdtke
+Conteúdo: Estudo dos elementos figurados do sangue e mecânica da hemostasia.
+Práticas: Contagem global de hemácias e leucócitos em câmara de Neubauer; determinação do microhematócrito e cálculo dos índices hematimétricos (VCM, HCM, CHCM, RDW); dosagem de hemoglobina pelo método da cianometemoglobina; contagem de reticulócitos e Velocidade de Hemossedimentação (VHS); contagem diferencial de leucócitos em esfregaço sanguíneo corado; contagem de plaquetas (métodos direto e de Fônio); e testes da via de coagulação: Tempo de Protrombina (TP) e Tempo de Tromboplastina Parcial Ativado (TTPa).
+
+[CAPÍTULO VI: IMUNOLOGIA]
+Autores: Adriane Pozzobon, Andréa Horst
+Conteúdo: Princípios da resposta imune e métodos diagnóstico fundamentados na ligação antígeno-anticorpo.
+Práticas: Tipagem sanguínea direta em lâmina (Sistemas ABO e fator Rh); Testes de Coombs Direto e Indireto (Pesquisa de Anticorpos Irregulares - PAI) para imuno-hematologia e doença hemolítica do recém-nascido; determinação do Fator Reumatoide (FR) por aglutinação passiva com partículas de látex; e ensaio imunoenzimático (ELISA) para quantificação de eritropoetina.
+
+[CAPÍTULO VII: ANÁLISES DE LÍQUIDOS CORPORAIS]
+Autores: Adriane Pozzobon, Geórgia M. Dexheimer, Welton Lüdtke
+Conteúdo: Procedimentos laboratoriais para diagnóstico físico, químico, citológico e microbiológico de fluidos biológicos.
+Práticas: Exame Qualitativo de Urina (EQU/Uroanálise - físico, fita reativa e sedimentoscopia); Espermograma (análise macroscópica, motilidade, vitalidade e contagem global); análise do Líquido Cefalorraquidiano (LCR/Líquor - aspecto, contagem em câmara de Fuchs-Rosenthal/Neubauer, citocentrifugação); análise do Líquido Sinovial (teste da mucina e pesquisa de cristais); e análise de líquidos serosos (Ascítico e Pleural - diferenciação entre transudato e exsudato).
+
+[CAPÍTULO VIII: MICOLOGIA]
+Autores: Gabriela K. S. Lawisch
+Conteúdo: Classificação das micoses (superficiais, cutâneas, subcutâneas, sistêmicas e oportunistas) e normas de biossegurança.
+Práticas: Protocolos de coleta de amostras clínicas (pele, unhas, cabelos, mucosas, líquidos); Exame Direto com clareamento por KOH (10-40%) e colorações específicas (Tinta da China para Cryptococcus); cultivo fúngico em Ágar Sabouraud Dextrose (ASD) e avaliação macro e micromorfológica; identificação de fungos dimórficos; teste do tubo germinativo para Candida albicans; prova da urease e técnica de microcultivo em lâmina.
+
+[CAPÍTULO IX: PARASITOLOGIA]
+Autores: Gabriela K. S. Lawisch, Geórgia M. Dexheimer, Jairo L. Hoerlle
+Conteúdo: Diagnóstico parasitológico de fezes (EPF) para pesquisa de protozoários e helmintos.
+Práticas: Exame direto de fezes a fresco; Método de Hoffmann, Pons e Janer / Lutz (sedimentação espontânea); Método de Ritchie (centrífugo-sedimentação em formol-éter); Método de Willis (flutuação simples); Método de Faust (centrífugo-flutuação com sulfato de zinco); Métodos de Baermann-Moraes e Rugai (pesquisa de larvas por termohidrotropismo); coloração de Kinyoun / Ziehl-Neelsen modificada para coccídeos (Cryptosporidium, Isospora); e pesquisa de sangue oculto nas fezes.
+
+[CAPÍTULO X: BACTERIOLOGIA]
+Autores: Geórgia M. Dexheimer, Jairo L. Hoerlle, Johan Prediger
+Conteúdo: Isolamento, identificação bioquímica e avaliação de sensibilidade a antimicrobianos.
+Práticas: Preparo de meios de cultura (Ágar Chocolate, Ágar MacConkey, Ágar Sangue, Ágar CLED, Caldo BHI e Skim Milk); técnicas de semeadura qualitativa e quantitativa (alça calibrada); Coloração de Gram e Ziehl-Neelsen; testes bioquímicos rápidos (Catalase, Coagulase, Teste de CAMP); Antibiograma por Disco-Difusão (Método Kirby-Bauer) padronizado pela escala 0,5 de McFarland; e Teste de aproximação de discos para detecção de Beta-lactamases de Espectro Estendido (ESBL).
+
+[CAPÍTULO XI: IMAGENOLOGIA]
+Autores: Fernanda Rocha da Trindade
+Conteúdo: Princípios físicos, protocolos práticos e processamento de imagens nas diferentes modalidades radiológicas e terapêuticas.
+Práticas: Radiologia Convencional: Protocolos radiográficos de tórax e ossos da face/seios paranasais. Ressonância Magnética: Parâmetros de sequências (T1, T2, planos sagital, axial e coronal) e manipulação digital de imagens (brilho, contraste, ruído e histograma via software ImageJ). Ultrassonografia: Princípios físicos de ondas mecânicas, controle de qualidade usando phantoms, e diferenciação entre uso diagnóstico, estético e terapêutico. Medicina Nuclear: Métodos de aquisição (Cintilografia, SPECT, PET-CT), radioproteção, dosimetria e terapia radioisotópica (ex.: Iodo-131). Radioterapia: Planejamento de dose (2D, 3D conformada, IMRT, Braquiterapia) e definição de volumes de tratamento (GTV, CTV, PTV).
+
+[CAPÍTULO XII: FISIOLOGIA]
+Autores: Andréa Horst
+Conteúdo: Estudo prático da homeostasia dos sistemas respiratório, cardiovascular, renal e nervoso.
+Práticas: Espirometria (medição de volumes respiratórios: VC, VRI, VRE, e cálculo das capacidades pulmonares: CV, CI, CRF, CPT); avaliação do sistema cardiovascular (aferição de pressão arterial e frequência cardíaca em repouso e pós-exercício físico); avaliação da função renal via fita reativa em urina sob diferentes condições fisiológicas/patológicas (hidratação, desidratação, consumo de álcool e diabetes descompensada); e testes do sistema nervoso (sensação e adaptação térmica, estesiometria para discriminação entre dois pontos e avaliação do reflexo miootático patelar).'
