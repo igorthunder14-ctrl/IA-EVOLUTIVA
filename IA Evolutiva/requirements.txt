@@ -1,0 +1,5 @@
+flask
+google-genai
+pypdf
+werkzeug
+gunicorn

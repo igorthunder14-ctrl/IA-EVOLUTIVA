@@ -140,12 +140,14 @@ def perguntar():
         contexto_conversacional.append(f"Usuário: {turno['pergunta']}")
         contexto_conversacional.append(f"Assistente: {turno['resposta']}")
 
+    historico_texto = "\n".join(contexto_conversacional) if contexto_conversacional else "Nenhum histórico anterior."
+
     prompt_final = f"""
     Base de Conhecimento Local:
     {base_conhecimento if base_conhecimento else "Nenhum documento carregado."}
 
     Histórico Recente:
-    {"\n".join(contexto_conversacional) if contexto_conversacional else "Nenhum histórico anterior."}
+    {historico_texto}
 
     Pergunta Atual: {pergunta_usuario}
     """
