@@ -5,7 +5,6 @@ import uuid
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
-
 from flask import Flask, jsonify, render_template, request, session
 from pypdf import PdfReader
 from werkzeug.utils import secure_filename
@@ -29,7 +28,9 @@ SYSTEM_INSTRUCTION = """
 Você é o NEXUS, um assistente de inteligência artificial especializado
 em biomedicina e ciências da saúde.
 - Responda em português brasileiro, com clareza e precisão.
-- Seja objetivo, mas desenvolva o assunto quando necessário.
+- Priorize respostas rápidas, claras e curtas.
+- Para pedidos de resumo, entregue apenas as ideias principais em tópicos, sem introdução longa.
+- Se o usuário não pedir detalhes, use no máximo 5 tópicos e uma conclusão curta.
 - Use tópicos quando isso facilitar a compreensão.
 - Responda a perguntas gerais mesmo sem documentos locais.
 - Use TXT e PDF fornecidos como material complementar.
@@ -111,15 +112,21 @@ def carregar_todos_os_documentos():
                     conteudos.append(f"DOCUMENTO PDF: {caminho.name}\n{texto_pdf}")
             except Exception as erro:
                 print(f"Erro ao ler PDF {caminho.name}:", repr(erro))
-    return "\n\n".join(conteudos)[:40000]
+    # Limite menor de contexto para reduzir o tempo de processamento.
+    return "\n\n".join(conteudos)[:6000]
 
 
-def consultar_ollama(mensagens):
+def consultar_ollama(mensagens, max_tokens=180):
     payload = json.dumps({
         "model": MODELO_LOCAL,
         "messages": mensagens,
         "stream": False,
-        "options": {"temperature": 0.4},
+        "keep_alive": "30m",
+        "options": {
+            "temperature": 0.2,
+            "num_ctx": 2048,
+            "num_predict": max_tokens,
+        },
     }).encode("utf-8")
 
     req = Request(
@@ -130,7 +137,7 @@ def consultar_ollama(mensagens):
     )
 
     try:
-        with urlopen(req, timeout=300) as resposta_http:
+        with urlopen(req, timeout=600) as resposta_http:
             dados = json.loads(resposta_http.read().decode("utf-8"))
     except HTTPError as erro:
         detalhe = erro.read().decode("utf-8", errors="replace")
@@ -233,22 +240,30 @@ def perguntar():
             return jsonify({"resposta": resposta})
 
     try:
-        base_conhecimento = carregar_todos_os_documentos()
         historico_salvo = carregar_historico()
         mensagens = [{"role": "system", "content": SYSTEM_INSTRUCTION}]
 
-        contexto = f"""
-BASE DE CONHECIMENTO LOCAL:
-{base_conhecimento if base_conhecimento else "Nenhum documento local foi carregado."}
+        # Só lê e envia os documentos quando a pergunta parece depender deles.
+        termos_documento = (
+            "resumo", "resuma", "resumir", "documento", "pdf", "arquivo",
+            "texto enviado", "material enviado", "com base no", "nesse texto",
+            "neste texto", "no arquivo", "no documento", "conteúdo do"
+        )
+        precisa_documentos = any(termo in pergunta_usuario.lower() for termo in termos_documento)
+        if precisa_documentos:
+            base_conhecimento = carregar_todos_os_documentos()
+            if base_conhecimento:
+                mensagens.append({
+                    "role": "system",
+                    "content": (
+                        "Use o material abaixo para responder ao pedido. Para resumo, "
+                        "priorize as ideias centrais e não acrescente informações que não constem no texto.\n\n"
+                        + base_conhecimento
+                    ),
+                })
 
-Instruções sobre documentos: use o conteúdo acima como material complementar.
-Se não houver informação relevante nos documentos, responda normalmente com seus conhecimentos.
-Não diga que consultou um documento se não houver conteúdo disponível.
-"""
-        mensagens.append({"role": "system", "content": contexto})
-
-        # Mantém os últimos turnos como contexto para perguntas de acompanhamento.
-        for turno in historico_salvo[-8:]:
+        # Só envia o último turno para reduzir o tamanho do contexto.
+        for turno in historico_salvo[-1:] :
             pergunta_anterior = str(turno.get("pergunta", "")).strip()
             resposta_anterior = str(turno.get("resposta", "")).strip()
             if pergunta_anterior and resposta_anterior:
@@ -256,7 +271,8 @@ Não diga que consultou um documento se não houver conteúdo disponível.
                 mensagens.append({"role": "assistant", "content": resposta_anterior})
 
         mensagens.append({"role": "user", "content": pergunta_usuario})
-        resposta_ia = consultar_ollama(mensagens)
+        pergunta_curta = any(t in pergunta_usuario.lower() for t in ("resumo", "resuma", "resumir", "resuma esse", "resuma este"))
+        resposta_ia = consultar_ollama(mensagens, max_tokens=220 if pergunta_curta else 140)
         salvar_no_historico(pergunta_usuario, resposta_ia)
         return jsonify({"resposta": resposta_ia})
 
@@ -291,4 +307,4 @@ def resetar():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    app.run(debug=False, port=5000)
